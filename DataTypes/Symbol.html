@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Learning Symbol....!!</h2>
+
+    <script>
+
+    const testSymbol = Symbol("Hello world");
+
+    console.log(`Type of testSymbol  = ${typeof(testSymbol)}`);
+
+    //cannot print this because we cannot concetenate the string with symbol but can when we convert it to string
+    //console.log(`\n testSymbol  = ${testSymbol}`);      
+    console.log("testSymbol = "+testSymbol.toString());      
+
+    console.log(testSymbol);
+    console.log(testSymbol.description);
+
+    const id = Symbol("id");
+    
+    const person = {
+        name : "Arsalan",
+        age : "27",
+        [id]: 34
+    }
+
+    console.log(person);
+
+    console.log(person.name);
+
+    console.log(person.id);
+
+    //To get the symbol we use [] instead of .
+    console.log(person[id]);
+
+    //function use to get the alert message
+    //alert(person[id]);
+
+    //cant print symbol in loop
+    for(key in person)
+    {
+        console.log("\n\n"+key);
+    }
+
+     // Enumerate symbol properties
+     const symbols = Object.getOwnPropertySymbols(person);
+    for (const sym of symbols) {
+        console.log(`Symbol key: ${sym.toString()}, value: ${person[sym]}`);
+    }
+
+    </script>
+
+</body>
+
+</html>
+
+//Change in symbol script for commiting.
