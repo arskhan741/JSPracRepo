@@ -1,3 +1,5 @@
+
+
 let myName = "Harry";
 
 console.log(myName.toUpperCase());
@@ -19,6 +21,9 @@ let fr = "Arsalan";
 //     {
 //         console.log(key);
 //     }
+
+console.log("\n");//dd 
+
 
 for(let i=0; i<fr.length; i++)
     {
