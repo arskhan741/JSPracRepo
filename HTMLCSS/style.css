@@ -1,0 +1,80 @@
+* {
+
+    /* Removes all spaces and is basic good practice to design website, Check box sizing later
+    Without box sizing we have some extra spaces(margins) around each element which we do not want */
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(227, 228, 176);
+
+    /* Font family inherits all the fonts on our website thats why whole website fonts are changed */
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+    /* spacing */
+    padding: 50px;
+}
+
+h1 {
+    font-size: 35px;
+
+    /* Padding is space inside the h1, and margin is space outside, outside space makes more sense in this case */
+
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+.first {
+    color: blue
+}
+
+.second {
+    color: rgb(99, 168, 35);
+    font-style: italic;
+}
+
+#your-name {
+    background-color: rgb(89, 124, 84);
+    border: 5px solid #00b7ff;
+
+    width: 400px;
+    padding: 25px;
+
+    margin-top: 30px;
+}
+
+input,
+button {
+    margin: 10px;
+    padding: 10px;
+}
+
+a {
+    background-color: aqua;
+}
+
+/* Selects the h2 inside id#your name */
+#your-name h2 {
+    background-color: brown;
+    color: white;
+}
+
+#batman-image {
+    height: 300px;
+
+}
