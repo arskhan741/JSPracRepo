@@ -1,16 +1,10 @@
 'use strict';
 
-//  console.log(document.querySelector(`.message`).textContent);
+let score = 20;
 
-//  document.querySelector((`.message`)).textContent = `👍Correct Number!`;
+const secretNumber = Math.trunc(Math.random() * 20) + 1;
 
-//  document.querySelector(`.number`).textContent = `GG`;
-
-//  console.log( document.querySelector(`.guess`).nodeValue);
- 
-//  document.querySelector(`.guess`).nodeValue = 69;
-
-//  console.log( document.querySelector(`.guess`).nodeValue);
+document.querySelector(`.number`).textContent = secretNumber;
 
 document.querySelector(`.check`).addEventListener(`click`, function (){
 
@@ -18,13 +12,31 @@ document.querySelector(`.check`).addEventListener(`click`, function (){
 
         guess = Number(guess);
 
-        console.log(`Guess = ${guess} and type = ${typeof(guess)}`);
+        //console.log(`Guess = ${guess} and type = ${typeof(guess)}`);
 
         if(!guess){
             document.querySelector((`.message`)).textContent = `Please Enter Valid Number!`;
         }
-        else
+        else if(guess == secretNumber)
         {
-            document.querySelector((`.message`)).textContent = `Start Guessing .........!`;
+            //Correct Guess
+            document.querySelector((`.message`)).textContent = `Correct Number`;
+        }
+        else if(guess < secretNumber)
+        {
+            //Wrong Guess
+            DecreaseScore();
+            document.querySelector((`.message`)).textContent = `📉too Low`;
+        }
+        else if(guess > secretNumber)
+        {
+            //Wrong Guess
+            DecreaseScore();
+            document.querySelector((`.message`)).textContent = `📈too High`;
         }
 })
+
+function DecreaseScore() {
+    score--;
+    document.querySelector(`.score`).textContent = score;
+}
