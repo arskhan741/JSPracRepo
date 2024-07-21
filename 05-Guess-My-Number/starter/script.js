@@ -67,7 +67,7 @@ function ResetGame() {
   secretNumber = Math.trunc(Math.random() * 20) + 1;
 
   //reset score
-  score = 20;
+  score = 20;05-Guess-My-Number/starter/script.js
 
   //reset middle box number
   document.querySelector(`.number`).textContent = `?`;
